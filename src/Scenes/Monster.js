@@ -126,13 +126,13 @@ class Monster extends Phaser.Scene {
     }
 
     update() {
-        let my = this.my;    // create an alias to this.my for readability
+        let my = this.my;    //create an alias to this.my for readability
         
         if(this.A_key.isDown) {
-            // Move all parts to the left
+            //Move all parts to the left
             this.bodyX -= this.moveSpeed;
             
-            // Update positions of all body parts
+            //Update positions of all body parts
             my.sprite.body.x = this.bodyX;
             my.sprite.leftMonsterArm.x = this.leftArmX = this.bodyX - 75;
             my.sprite.rightMonsterArm.x = this.rightArmX = this.bodyX + 75;
@@ -149,10 +149,10 @@ class Monster extends Phaser.Scene {
         }
 
         if(this.D_key.isDown) {
-            // Move all parts to the right
+            //Move all parts to the right
             this.bodyX += this.moveSpeed;
             
-            // Update positions of all body parts
+            //Update positions of all body parts
             my.sprite.body.x = this.bodyX;
             my.sprite.leftMonsterArm.x = this.leftArmX = this.bodyX - 75;
             my.sprite.rightMonsterArm.x = this.rightArmX = this.bodyX + 75;
